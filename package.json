@@ -1,0 +1,55 @@
+{
+  "name": "@wesbitty/wesjetpkg",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "examples/*",
+    "apps/*",
+    "packages/*",
+    "packages/@wesjet/*"
+  ],
+  "scripts": {
+    "postinstall": "ts-patch install -s && ts-patch --persist",
+    "build": "tsc --build base.json",
+    "check:prettier": "prettier packages -c",
+    "check:eslint": "eslint packages --ext .ts --max-warnings=0",
+    "build:clean": "bash -c 'rm -rf packages/*/dist packages/@wesjet/*/dist'",
+    "postinstall:wesjet": "yarn workspaces foreach --verbose --include \"examples-*\" exec yarn wesjet postinstall",
+    "format:prettier": "prettier packages -w",
+    "format:eslint": "eslint packages --ext .ts --fix",
+    "lint": "run format:prettier && run format:eslint",
+    "wesjet": "run build:clean && run build && yarn workspace wesjet-nextjs-plugin run prepack",
+    "test": "CI=true VITEST_SEGFAULT_RETRY=3 yarn workspaces foreach --parallel run test",
+    "dev:ts": "run build:ts --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesbitty/wesjetpkg"
+  },
+  "author": "wesbitty",
+  "devDependencies": {
+    "@changesets/cli": "^2.25.0",
+    "@effect-ts/tracing-plugin": "^0.20.0",
+    "@types/prettier": "^2.7.1",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "prettier": "^2.7.1",
+    "ts-patch": "^2.0.2",
+    "typescript": "^4.8.4"
+  },
+  "resolutions": {
+    "esbuild": "0.15.7",
+    "wesjet": "workspace:*",
+    "@wesjet/*": "workspace:*",
+    "wesjet-simple-import-hooks": "workspace:*",
+    "wesjet-nextjs-plugin": "workspace:*",
+    "rxjs": "^7.1.0"
+  },
+  "packageManager": "yarn@3.2.4"
+}

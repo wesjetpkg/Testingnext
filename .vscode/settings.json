@@ -1,17 +1,11 @@
 {
-	"editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": false,
-    "source.fixAll": true,
-    "source.addMissingImports": true
-  },
-  "files.exclude": {
-    "**/.git": false,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/Thumbs.db": true,
-    "**/*.crswap": true
-  }
+    "files.exclude": {
+        "**/.git": false,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/*.crswap": true
+    }
 }
