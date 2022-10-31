@@ -1,9 +1,9 @@
 import React from 'react'
 import { Container } from '../components/common/Container'
-import { Icon } from 'src/components/common/Icon'
-import { Heading } from 'src/components/landing-page/Heading'
-import { Paragraph } from 'src/components/landing-page/Paragraph'
-import { Label } from 'src/components/common/Label'
+import { Icon } from '../components/common/Icon'
+import { Heading } from '../components/landing-page/Heading'
+import { Paragraph } from '../components/landing-page/Paragraph'
+import { Label } from '../components/common/Label'
 
 const NotFound = () => {
   return (

@@ -14,9 +14,9 @@ import { TreeNode } from 'types/TreeNode'
 import { Card } from './common/Card'
 import { Icon } from './common/Icon'
 import { Label } from './common/Label'
-import { buildDocsTree } from 'src/utils/build-docs-tree'
+import { buildDocsTree } from '../utils/build-docs-tree'
 import { allDocs, allExamples, allPosts, Post } from 'wesjet/jetpack'
-import { buildExamplesTree } from 'src/utils/build-examples-tree'
+import { buildExamplesTree } from '../utils/build-examples-tree'
 import { format } from 'date-fns'
 
 export const SearchProvider: FC<{ children: ReactNode }> = ({ children }) => {

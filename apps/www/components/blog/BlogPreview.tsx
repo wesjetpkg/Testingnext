@@ -1,5 +1,5 @@
 import { Post } from 'wesjet/jetpack'
-import { BlogDetails } from 'src/components/blog/BlogDetails'
+import { BlogDetails } from '../../components/blog/BlogDetails'
 import { Heading } from '../../components/landing-page/Heading'
 import { Paragraph } from '../../components/landing-page/Paragraph'
 import { ChevronLink } from '../../components/common/ChevronLink'
@@ -7,7 +7,7 @@ import { FC } from 'react'
 import Image from 'next/image'
 import { Card } from '../common/Card'
 import Link from 'next/link'
-import { Icon } from 'src/components/common/Icon'
+import { Icon } from '../../components/common/Icon'
 import { format } from 'date-fns'
 
 export const BlogPreview: FC<{ post: Post }> = ({ post }) => {

@@ -1,4 +1,4 @@
-// Based on https://github.com/marcelowa/promise-all-properties/blob/main/src/promiseAllProperties.ts
+// Based on https://github.com/marcelowa/promise-all-properties/blob/main/../promiseAllProperties.ts
 type PlainObj = Record<string, unknown>
 export type PromisesMap<T extends PlainObj> = {
   [P in keyof T]: Promise<T[P]> | T[P]

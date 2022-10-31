@@ -1,4 +1,4 @@
-import { sluggifyTitle, getNodeText } from 'src/utils/sluggify'
+import { sluggifyTitle, getNodeText } from '../../utils/sluggify'
 
 export const H2: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   const slug = sluggifyTitle(getNodeText(children))

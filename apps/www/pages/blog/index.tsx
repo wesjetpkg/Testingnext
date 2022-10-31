@@ -8,7 +8,7 @@ import { Container } from '../../components/common/Container'
 import { defineStaticProps } from '../../utils/next'
 import { Heading } from '../../components/landing-page/Heading'
 import { Paragraph } from '../../components/landing-page/Paragraph'
-import { BlogPreview } from 'src/components/blog/BlogPreview'
+import { BlogPreview } from '../../components/blog/BlogPreview'
 
 const content = {
   title: 'Wesjet Blog',

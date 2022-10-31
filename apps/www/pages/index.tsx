@@ -1,7 +1,7 @@
 import type { InferGetStaticPropsType } from 'next'
 import React, { useEffect, useState } from 'react'
 import { allDocs, allExamples, allPosts } from 'wesjet/jetpack'
-import { buildDocsTree } from 'src/utils/build-docs-tree'
+import { buildDocsTree } from '../utils/build-docs-tree'
 import { defineStaticProps } from '../utils/next'
 import { ColorScheme, snippetToHtml } from '../utils/syntax-highlighting'
 import { getUsedByCountWithFallback } from '../utils/used-by-count'
